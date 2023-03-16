@@ -5,10 +5,10 @@
         string repeat = "Y";
         do
         {
-            Console.WriteLine("Insert number X:");
+            Console.WriteLine("Insert number X?????????:");
             string FirstString = Console.ReadLine();
             int X = Convert.ToInt32(FirstString);
-            Console.WriteLine("Insert number Y:");
+            Console.WriteLine("Insert number Y?????????:");
             string SecondString = Console.ReadLine();
             int Y = Convert.ToInt32(SecondString);
             Console.WriteLine("Choose operating (+, -, *, /)");
