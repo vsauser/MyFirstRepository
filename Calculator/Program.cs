@@ -3,40 +3,45 @@
     public static void Main(string[] args) 
     {
         string repeat = "Y";
+        bool resultofcompare = false;
         do
         {
-            Console.WriteLine("Insert number X?????????:");
-            string FirstString = Console.ReadLine();
-            int X = Convert.ToInt32(FirstString);
-            Console.WriteLine("Insert number Y?????????:");
-            string SecondString = Console.ReadLine();
-            int Y = Convert.ToInt32(SecondString);
+            resultofcompare = false;
+            Console.WriteLine("Insert number X:");
+            string firstString = Console.ReadLine();
+            int x = Convert.ToInt32(firstString);
+            Console.WriteLine("Insert number Y:");
+            string secondString = Console.ReadLine();
+            int y = Convert.ToInt32(secondString);
             Console.WriteLine("Choose operating (+, -, *, /)");
-            string Operating = Console.ReadLine();
-            if (Operating == "+")
+            string operating = Console.ReadLine();
+            if (operating == "+")
             {
-                int Summ = X + Y;
-                Console.WriteLine("Summ = " + Summ);
+                int summ = x + y;
+                Console.WriteLine("Summ = " + summ);
             }
-            else if (Operating == "-")
+            else if (operating == "-")
             {
-                int Substruct = X - Y;
-                Console.WriteLine("Substruct = " + Substruct);
+                int substruct = x - y;
+                Console.WriteLine("Substruct = " + substruct);
             }
-            else if (Operating == "*")
+            else if (operating == "*")
             {
-                        int Add = X * Y;
-                        Console.WriteLine("Add = " + Add);
+                        int add = x * y;
+                        Console.WriteLine("Add = " + add);
             }
-            else if (Operating == "/")
+            else if (operating == "/")
             {
-                double Div = (double)X / (double)Y;
-                Console.WriteLine("{0:F4}", Div);
+                double div = (double)x / (double)y;
+                Console.WriteLine("{0:F4}", div);
             }
 
-            Console.WriteLine("Do you want to repeat evaluation?");
+            Console.WriteLine("Do you want to repeat evaluation? If Yes - insert y, if No - insert n");
 
+            repeat = Console.ReadLine();
+            if((repeat == "Y")||(repeat == "y")) resultofcompare = true;
         }
-        while (Console.ReadLine() == "Y");
+
+        while (resultofcompare);
     }  
 }
